@@ -49,13 +49,14 @@ class ViewController: UIViewController {
         }
     }
     @IBAction func btnPlay(sender: AnyObject) {
-        if btnPlayEPause.titleLabel?.text == "PLAY" {
+        if btnPlayEPause.titleLabel?.text == "VIDEO" {
             playMovie()
             movie?.play()
-            btnPlayEPause.setTitle("PAUSE", forState: UIControlState())
+            btnPlayEPause.hidden = true
+//            btnPlayEPause.setTitle("PAUSE", forState: UIControlState())
         }else {
             movie?.pause()
-            btnPlayEPause.setTitle("PLAY", forState: UIControlState())
+//            btnPlayEPause.setTitle("PLAY", forState: UIControlState())
         }
         
     }
