@@ -26,7 +26,7 @@
                                     </constraint>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-lK-Zpt">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-lK-Zpt">
                                 <rect key="frame" x="268" y="452" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="84" id="I02-hZ-TNW">
