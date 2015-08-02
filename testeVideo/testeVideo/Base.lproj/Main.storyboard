@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testeVideo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,79 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1ew-4G-ki5">
+                                <rect key="frame" x="130" y="74" width="340" height="267"/>
+                                <color key="backgroundColor" red="0.7198999411" green="0.42052264499999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="267" id="h6h-Y1-4TG">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
+                                    </constraint>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2D3-lK-Zpt">
+                                <rect key="frame" x="268" y="452" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="84" id="I02-hZ-TNW">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
+                                    <constraint firstAttribute="width" constant="126" id="k4S-I3-iBR">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="200"/>
+                                    </constraint>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="60"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" red="0.39599619489999999" green="0.082297500790000006" blue="0.67967780769999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="I02-hZ-TNW"/>
+                                        <exclude reference="k4S-I3-iBR"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="I02-hZ-TNW"/>
+                                        <include reference="k4S-I3-iBR"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="btnPlay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5nl-Fn-aIG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.7198999411" green="0.42052264499999997" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="1ew-4G-ki5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="74" id="FHg-81-5wb"/>
+                            <constraint firstItem="2D3-lK-Zpt" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="221" id="LUN-TD-R3q">
+                                <variation key="heightClass=regular-widthClass=regular" constant="270"/>
+                            </constraint>
+                            <constraint firstItem="1ew-4G-ki5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="114" id="M8i-fZ-3Fa"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1ew-4G-ki5" secondAttribute="trailing" constant="114" id="mDF-9J-ad5"/>
+                            <constraint firstItem="2D3-lK-Zpt" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="520" id="xPT-fR-bHf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="LUN-TD-R3q"/>
+                                <exclude reference="xPT-fR-bHf"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular">
+                            <mask key="constraints">
+                                <include reference="LUN-TD-R3q"/>
+                                <include reference="xPT-fR-bHf"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="btnPlayEPause" destination="2D3-lK-Zpt" id="Gqm-pB-vgb"/>
+                        <outlet property="videoView" destination="1ew-4G-ki5" id="2yP-DS-vMO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="380" y="232.5"/>
         </scene>
     </scenes>
 </document>
